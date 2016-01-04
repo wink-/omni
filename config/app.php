@@ -22,7 +22,7 @@ return [
 	|
 	| The application name for use within the UI of the application
 	*/
-    'name' => 'Laravel 5 Bootstrap',
+    'name' => 'Project Omni',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +177,8 @@ return [
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        yajra\Datatables\DatatablesServiceProvider::class,        
 
         /*
          * Has to override the Collective\Html\HtmlServiceProvider form singleton
