@@ -56,8 +56,8 @@
                 <div class="col-sm-6">                
                         {{-- Shorthand for this is just selectState, set which version is shorthanded in Macros/Dropdowns --}}
                         {!! Form::selectStateUS('STATE', 'NY', ['class' => 'form-control']) !!}
-                    </div>
                 </div>
+            </div>
 
             <div class="form-group {{ $errors->has('ZIP') ? 'has-error' : ''}}">
                 {!! Form::label('ZIP', 'Zip: ', ['class' => 'col-sm-3 control-label']) !!}

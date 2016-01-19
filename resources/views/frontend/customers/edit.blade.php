@@ -12,35 +12,35 @@
     ]) !!}
 
                 <div class="form-group {{ $errors->has('CUSTCODE') ? 'has-error' : ''}}">
-                {!! Form::label('CUSTCODE', 'Custcode: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('CUSTCODE', 'Code: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('CUSTCODE', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('CUSTCODE', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('CUSTNAME') ? 'has-error' : ''}}">
-                {!! Form::label('CUSTNAME', 'Custname: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('CUSTNAME', 'Name: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('CUSTNAME', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('CUSTNAME', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('ADDRESS1') ? 'has-error' : ''}}">
-                {!! Form::label('ADDRESS1', 'Address1: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('ADDRESS1', 'Physical Address: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('ADDRESS1', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('ADDRESS1', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('ADDRESS2') ? 'has-error' : ''}}">
-                {!! Form::label('ADDRESS2', 'Address2: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('ADDRESS2', 'Suite/Apt #: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('ADDRESS2', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('ADDRESS2', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('ADDRESS3') ? 'has-error' : ''}}">
-                {!! Form::label('ADDRESS3', 'Address3: ', ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('ADDRESS3', 'Billing Address: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('ADDRESS3', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('ADDRESS3', '<p class="help-block">:message</p>') !!}
@@ -55,51 +55,17 @@
             </div>
             <div class="form-group {{ $errors->has('STATE') ? 'has-error' : ''}}">
                 {!! Form::label('STATE', 'State: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('STATE', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('STATE', '<p class="help-block">:message</p>') !!}
+                <div class="col-sm-6">                
+                    {{-- Shorthand for this is just selectState, set which version is shorthanded in Macros/Dropdowns --}}
+                    {!! Form::selectStateUS('STATE', null, ['class' => 'form-control']) !!}
                 </div>
             </div>
+
             <div class="form-group {{ $errors->has('ZIP') ? 'has-error' : ''}}">
                 {!! Form::label('ZIP', 'Zip: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('ZIP', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('ZIP', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('SHIPTO') ? 'has-error' : ''}}">
-                {!! Form::label('SHIPTO', 'Shipto: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('SHIPTO', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('SHIPTO', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('destination_id') ? 'has-error' : ''}}">
-                {!! Form::label('destination_id', 'Destination Id: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::number('destination_id', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('destination_id', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('SHIPVIA') ? 'has-error' : ''}}">
-                {!! Form::label('SHIPVIA', 'Shipvia: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('SHIPVIA', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('SHIPVIA', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('carrier_id') ? 'has-error' : ''}}">
-                {!! Form::label('carrier_id', 'Carrier Id: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::number('carrier_id', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('carrier_id', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('DEFFREIGHT') ? 'has-error' : ''}}">
-                {!! Form::label('DEFFREIGHT', 'Deffreight: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('DEFFREIGHT', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('DEFFREIGHT', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('CONTACT1') ? 'has-error' : ''}}">
@@ -158,25 +124,8 @@
                     {!! $errors->first('EMAIL', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-            <div class="form-group {{ $errors->has('COD') ? 'has-error' : ''}}">
-                {!! Form::label('COD', 'Cod: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                                <div class="checkbox">
-                <label>{!! Form::radio('COD', '1') !!} Yes</label>
-            </div>
-            <div class="checkbox">
-                <label>{!! Form::radio('COD', '0', true) !!} No</label>
-            </div>
-                    {!! $errors->first('COD', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group {{ $errors->has('TAXIDEN') ? 'has-error' : ''}}">
-                {!! Form::label('TAXIDEN', 'Taxiden: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::text('TAXIDEN', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('TAXIDEN', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
+
+
             <div class="form-group {{ $errors->has('REMARKS') ? 'has-error' : ''}}">
                 {!! Form::label('REMARKS', 'Remarks: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
@@ -184,14 +133,6 @@
                     {!! $errors->first('REMARKS', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-            <div class="form-group {{ $errors->has('TimeStamp') ? 'has-error' : ''}}">
-                {!! Form::label('TimeStamp', 'Timestamp: ', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::input('datetime-local', 'TimeStamp', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('TimeStamp', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
-
 
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">

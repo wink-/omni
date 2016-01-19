@@ -111,6 +111,11 @@ You can customize the generator's stub files/templates to achieve your need.
 
 ## Custom Generator
 This is where I will work on the lines for the crud generator.
+Customer
 ```
 php artisan crud:generate Customers --fields="CUSTCODE:string, CUSTNAME:string:required, ADDRESS1:string, ADDRESS2:string, ADDRESS3:string, CITY:string, STATE:string, ZIP:string, SHIPTO:string, destination_id:integer, SHIPVIA:string, carrier_id:integer, DEFFREIGHT:string, CONTACT1:string, PHONE1:string, EXTENSION1:string, CONTACT2:string, PHONE2:string, EXTENSION2:string, FAX:string, EMAIL:string, COD:boolean, TAXIDEN:string, REMARKS:string, TimeStamp:datetime" --pk=ID --view-path="frontend"
+```
+Lab Analysis
+```
+php artisan crud:generate Analysis --fields="RecordName:string, FormName:string, Date:datetime, Value1:string, Value2:string, Value3:string, Value4:string, Value5:string, Value6:string, Value7:string, Value8:string, Value9:string, Value10:string, Value11:string, Value12:string, Value13:string, Value14:string, Value15:string, Value16:string, Value17:string, Value18:string, Value19:string, Value20:string, EmpCode:string, TimeStamp:datetime, DeleteVistible:string, IDy:string, ActValue1:string, ActValue2:string, ActValue3:string, ActValue4:string, ActValue5:string, ActValue6:string, ActValue7:string, ActValue8:string, ActValue9:string, ActValue10:string, ActValue11:string, ActValue12:string, ActValue13:string, ActValue14:string, ActValue15:string, ActValue16:string, ActValue17:string, ActValue18:string, ActValue19:string, ActValue20:string" --pk=ID --namespace=Models\Lab
 ```
